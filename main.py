@@ -91,7 +91,7 @@ class MainWidget(QWidget):
         self.change_btn.clicked.connect(self.change_row)
         self.add_btn.clicked.connect(self.add_row)
     
-    def change_row(self, row_id=None):
+    def change_row(self, *args, row_id=None):
         if row_id is None:
             row = self.table.currentRow()
             row_id = self.table.item(row, 0).text()
